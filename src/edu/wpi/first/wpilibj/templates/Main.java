@@ -40,12 +40,13 @@ public class Main extends SimpleRobot
     }
 
     /**
-     * This function is called once each time the robot enters operator control.
+     * called when robot enters operatorControl.
      */
     public void operatorControl()
     {
         while(isOperatorControl() && isEnabled())
         {
+            //drive robot using tank drive.
             driveTrain.drive(controller.getRawAxis(Constants.axis_leftStick_Y),
                              controller.getRawAxis(Constants.axis_rightStick_Y));
         }
