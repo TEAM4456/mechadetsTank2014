@@ -1,0 +1,3 @@
+LT = left tank drive
+RT = right tank drive
+A = shift toggle

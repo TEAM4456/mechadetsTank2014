@@ -27,11 +27,13 @@ public class Main extends SimpleRobot
     Joystick controller;
     DriveTrain driveTrain;
     UI ui = new UI();
+    Shift shift;
     
     public void robotInit()
     {
         controller = new Joystick(1);
         driveTrain = new DriveTrain(1,2,3,4);
+        shift = new Shift(1, 2, 3, 4);
     }
     
     public void autonomous()
@@ -49,6 +51,11 @@ public class Main extends SimpleRobot
             //drive robot using tank drive.
             driveTrain.drive(controller.getRawAxis(Constants.axis_leftStick_Y),
                              controller.getRawAxis(Constants.axis_rightStick_Y));
+            
+            //SHIFT
+            //if A pressed, Toggle Gear Shifters.
+            if (controller.getRawButton(buttonA))
+                shift.toggle();
         }
     }
     
