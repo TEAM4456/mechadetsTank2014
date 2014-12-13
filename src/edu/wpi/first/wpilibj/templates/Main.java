@@ -56,7 +56,7 @@ public class Main extends SimpleRobot
             
             //SHIFT
             //BUTTON A toggle shifters
-            if (controller.getRawButton(buttonA))
+            if (controller.getRawButton(Constants.button_A))
             {
                 shift.toggle();
             }
