@@ -1,3 +1,22 @@
-LT = left tank drive
-RT = right tank drive
+LStick = left tank drive
+RStick = right tank drive
 A = shift toggle
+
+A
+B
+X
+Y
+
+LBumper
+RBumper
+
+Back
+Start
+
+LStick
+LStickClick
+RStick
+RStickClick
+
+LTrigger
+RTrigger

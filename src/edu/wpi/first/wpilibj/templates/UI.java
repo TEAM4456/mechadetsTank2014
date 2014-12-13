@@ -42,6 +42,8 @@ public class UI
         outputBox.println(DriverStationLCD.Line.kUser5, 1, "                                        ");
         outputBox.println(DriverStationLCD.Line.kUser6, 1, "                                        ");
         
+        //driverStationLCD is 40 char wide.
+        
         outputBox.updateLCD();
     }
 }

@@ -26,7 +26,7 @@ public class Main extends SimpleRobot
     
     Joystick controller;
     DriveTrain driveTrain;
-    UI ui = new UI();
+    UI ui;
     Shift shift;
     
     public void robotInit()
@@ -34,6 +34,7 @@ public class Main extends SimpleRobot
         controller = new Joystick(1);
         driveTrain = new DriveTrain(1,2,3,4);
         shift = new Shift(1, 2, 3, 4);
+        ui = new UI();
     }
     
     public void autonomous()
@@ -49,13 +50,18 @@ public class Main extends SimpleRobot
         while(isOperatorControl() && isEnabled())
         {
             //drive robot using tank drive.
+            //THUMBSTICKS drive the robot.
             driveTrain.drive(controller.getRawAxis(Constants.axis_leftStick_Y),
                              controller.getRawAxis(Constants.axis_rightStick_Y));
             
             //SHIFT
-            //if A pressed, Toggle Gear Shifters.
+            //BUTTON A toggle shifters
             if (controller.getRawButton(buttonA))
+            {
                 shift.toggle();
+            }
+            
+            ui.printOutput();
         }
     }
     

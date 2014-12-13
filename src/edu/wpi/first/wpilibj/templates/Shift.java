@@ -9,10 +9,6 @@ package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
-/**
- *
- * @author samega15
- */
 public class Shift
 {
     final static Value reverse = DoubleSolenoid.Value.kReverse;

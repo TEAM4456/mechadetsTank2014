@@ -6,10 +6,6 @@
 
 package edu.wpi.first.wpilibj.templates;
 
-/**
- *
- * @author samega15
- */
 public class Constants
 {
     //Defines Xbox Buttons
@@ -23,6 +19,8 @@ public class Constants
     public static final int button_Start = 8;
     public static final int button_leftStick = 9;
     public static final int button_rightStick = 10;
+    
+    //Xbox Axes
     public static final int axis_leftStick_X = 1;
     public static final int axis_leftStick_Y = 2;
     public static final int axis_triggers = 3;
